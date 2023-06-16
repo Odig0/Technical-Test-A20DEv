@@ -21,14 +21,14 @@ export class ProblemsService {
   constructor( private http: HttpClient ) { }
 
   sendRequest(problemOne: IProblemOne) {
-    const url = `${this.apiUrl}/problem-1/chess/`
+    const url = `${this.apiUrl}/problem/chess/`
     const inputData = {...problemOne};    
     return this.http.post(url, inputData)
   
     
     }
     sendRequestTwo(problemTwo: IProblemTwo) {
-    const url = `${this.apiUrl}/problem-1/string/`
+    const url = `${this.apiUrl}/problem/string/`
     const inputData = JSON.stringify(problemTwo); 
     return this.http.post(url, inputData, { headers: { 'Content-Type': 'application/json' } });
       
