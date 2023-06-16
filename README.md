@@ -13,6 +13,7 @@ Please make sure you have Node, Angular, Python and Django installed.
       Node: 18.13.0  
       Django: 4.2.2  
 Install Angular dependencies:
+
                             npm install
 (make sure u have virtualenv activate) 
 Windows or create one using: 
