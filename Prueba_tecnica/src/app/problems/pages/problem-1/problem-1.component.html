@@ -1,0 +1,92 @@
+<form
+  class="flex flex-col gap-3 text-white"
+  #queensForm="ngForm"
+>
+  <div class="grid grid-cols-[25px_1fr] gap-2 items-center">
+    <label for="n">n:</label>
+    <input
+      type="number"
+      id="n"
+      name="n"
+      [(ngModel)]="n"
+      required
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Create a chessboard of size n"
+      required
+    />
+  </div>
+
+  <div class="grid grid-cols-[25px_1fr] gap-2 items-center">
+    <label class="g-col-6" for="k">k:</label>
+    <input
+      type="number"
+      id="k"
+      name="k"
+      [(ngModel)]="k"
+      required
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Number of obstacles:"
+      required
+    />
+  </div>
+  <div class="grid grid-cols-[25px_1fr] gap-2 items-center">
+    <label for="rq">rq:</label>
+    <input
+      type="number"
+      id="rq"
+      name="rq"
+      [(ngModel)]="rq"
+      required
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Queen's row "
+      required
+    />
+  </div>
+
+  <div class="grid grid-cols-[25px_1fr] gap-2 items-center">
+    <label for="cq">cq:</label>
+    <input
+      type="number"
+      id="cq"
+      name="cq"
+      [(ngModel)]="cq"
+      required
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Queen's column"
+      required
+    />
+  </div>
+  <div class="grid grid-cols-[25px_1fr] gap-2 items-center">
+    <label for="obstacles">Obstacles:</label>
+    <input
+      type="text"
+      id="obstacles"
+      name="obstacles"
+      [(ngModel)]="auxobstacles"
+      (ngModelChange)="convertToMatrix()"
+      required
+      class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      placeholder="Separated by commas (e.g., 4,4,3,2)"
+    />
+  </div>
+
+
+
+  <h2 ><span>
+    Number of squares the queen can move: 
+    </span>
+    <span *ngIf="result2"
+    >
+    {{result2}}
+    </span>
+ </h2>
+
+  <button
+    type="button"
+    (click)="submitForm()"
+    class="text-white mt-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+  >
+    Submit
+  </button>
+  
+</form>
