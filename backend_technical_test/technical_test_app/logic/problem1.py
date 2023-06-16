@@ -30,7 +30,7 @@ class Chess:
             raise ValueError("The value of 'k' must be between 0 and 100,000.")
 
     def _validate_obstacles(self):
-        if len(self.obstacles) == self.k*2:
+        if len(self.obstacles) > self.k:
             raise ValueError(f"The number of obstacles must be the same as 'k: {self.k}'")
 
     def validate_is_field_number(self, field_value):
