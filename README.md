@@ -49,7 +49,7 @@ The queen is standing at position (rq, cq). In a single move, she can attack any
 - cq: integer, the column number of the queen's position
 - obstacles: a two dimensional array of integers where each element is an array of  integers, the row and column of an obstacle
 
-Problem2L String Value:
+Problem2 String Value:
 Jane loves strings more than anything. She has a string t with her, and value of string s over function f can be calculated as given below:
 
 f(s) = |s| x Number of times s occurs in t
