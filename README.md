@@ -2,6 +2,7 @@
 Technical Test for A2O Dev  in Django and Angular
 To run this project: 
 Clone the repository: Use the git clone command followed by the repository URL to clone the repository. 
+
                         git clone https://github.com/Odig0/Technical-test-A20Dev
                         
 go to the folder cd: repository-name
