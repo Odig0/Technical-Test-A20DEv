@@ -7,25 +7,35 @@ Clone the repository: Use the git clone command followed by the repository URL t
 go to the folder cd: repository-name
 Please make sure you have Node, Angular, Python and Django installed.
       currenty using: 
-      Python 3.10.7 
-      Angular CLI: 16.0.1
-      Node: 18.13.0
-      Django: 4.2.2
+      Python 3.10.7   
+      Angular CLI: 16.0.1  
+      Node: 18.13.0  
+      Django: 4.2.2  
 Install Angular dependencies:
                             npm install
 (make sure u have virtualenv activate) 
 Windows or create one using: 
-                          python -m venv venv 
+
+                          python -m venv venv
+                          
 then activate : 
-                          "venv\Scripts\activate"       
+
+                          "venv\Scripts\activate"   
+                          
                           
 Install Django dependencies  navigate to the Django project's directory within the repository (where the manage.py file is located) 
 and run the following command to install the dependencies specified in the project's requirements.txt file 
+
                             pip install -r requirements.txt
+                            
 Start the Django development server:
+
                             python manage.py runserver
+                            
 To start the Angular development server:
+
                             ng serve
+                            
 Now you can use the application the problem1 being Chess problem:
 You have a square chess board with one queen and a number of obstacles placed on it. Determine how many squares the queen can attack.
 
